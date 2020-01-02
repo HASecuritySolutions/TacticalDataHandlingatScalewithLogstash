@@ -1,0 +1,14 @@
+#----------------------------- Logstash output --------------------------------
+output.logstash:
+  # The Logstash hosts
+  hosts: ["logstash:5044"]
+
+  # Optional SSL. By default is off.
+  # List of root certificates for HTTPS server verifications
+  ssl.certificate_authorities: ["/etc/filebeat/ca.crt"]
+
+  # Certificate for SSL client authentication
+  ssl.certificate: "/etc/filebeat/agent.crt"
+
+  # Client Certificate Key
+  ssl.key: "/etc/filebeat/agent.key"
